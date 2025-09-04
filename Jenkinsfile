@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     def packageJson = readJSON file: 'package.json'
-                    appVersion = packageJson.version
+                    def appVersion = packageJson.version
                     echo "application version is : ${appVersion}"
                 }
                 
@@ -35,7 +35,7 @@ pipeline {
             steps {
                 sh """
                 ls -ltr
-                zip -r backend-${appVersion}.zip * -x Jenkinsfile -x backend-${appVersion}.zip
+                zip -q -r backend-${appVersion}.zip * -x Jenkinsfile -x backend-${appVersion}.zip
                 """
             }
         }
