@@ -34,7 +34,7 @@ pipeline {
     post {
         always {
             echo "this will run always"
-            deleteDir()
+            // deleteDir()
         }
         success {
             echo "this will run when pipeline is success"
