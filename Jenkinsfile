@@ -9,7 +9,7 @@ pipeline {
     }
     environment {
         def appVersion = ''
-        nexusUrl = 'nexus.aviexpense.online'
+        nexusUrl = 'nexus.aviexpense.online:8081'
     }
     stages {
         stage('read version') {
