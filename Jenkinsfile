@@ -49,8 +49,9 @@ pipeline {
                     withSonarQubeEnv('sonar-7') { //referring sonar server
                         sh "${scannerHome}/bin/sonar-scanner"
                     }
-            }
-        }   
+                }
+           }
+        }
         stage('Nexus Artifact Upload') {
             steps {
                 script {
